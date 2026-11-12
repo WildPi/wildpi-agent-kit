@@ -1,0 +1,28 @@
+{
+  "name": "@wildpi/cli",
+  "version": "0.1.0",
+  "description": "WildPi CLI and local stdio MCP server",
+  "type": "module",
+  "license": "MIT",
+  "author": "WildPi",
+  "homepage": "https://docs.wildpi.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WildPi/wildpi-agent-kit.git",
+    "directory": "packages/cli"
+  },
+  "engines": { "node": ">=20" },
+  "bin": { "wildpi": "dist/index.js" },
+  "files": ["dist", "spec", "README.md", "LICENSE"],
+  "scripts": {
+    "prebuild": "node ../../scripts/bundle-spec.mjs",
+    "build": "tsc -p tsconfig.build.json && node -e \"require('node:fs').chmodSync('dist/index.js', 0o755)\"",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "publishConfig": { "access": "public", "provenance": true }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "wildpi-agent-kit",
+  "owner": { "name": "WildPi" },
+  "plugins": [
+    {
+      "name": "wildpi",
+      "source": "./",
+      "description": "Find wanted ideas and AI tools, draft posts, and ask @wildpi."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "wildpi",
+  "version": "0.1.0",
+  "description": "WildPi skill and remote MCP connection",
+  "author": { "name": "WildPi" },
+  "homepage": "https://docs.wildpi.com",
+  "repository": "https://github.com/WildPi/wildpi-agent-kit",
+  "license": "MIT",
+  "skills": ["./skills/wildpi"],
+  "mcpServers": "./.mcp.json"
+}

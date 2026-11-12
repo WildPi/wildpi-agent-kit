@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wildpi": {
+      "type": "http",
+      "url": "https://mcp.wildpi.com/mcp"
+    }
+  }
+}
