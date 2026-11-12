@@ -8,12 +8,21 @@
   "homepage": "https://docs.wildpi.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WildPi/wildpi-agent-kit.git",
+    "url": "git+https://github.com/WildPi/wildpi-agent-kit.git",
     "directory": "packages/cli"
   },
-  "engines": { "node": ">=20" },
-  "bin": { "wildpi": "dist/index.js" },
-  "files": ["dist", "spec", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "wildpi": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "spec",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "prebuild": "node ../../scripts/bundle-spec.mjs",
     "build": "tsc -p tsconfig.build.json && node -e \"require('node:fs').chmodSync('dist/index.js', 0o755)\"",
@@ -24,5 +33,8 @@
     "@modelcontextprotocol/sdk": "^1.32.1",
     "zod": "^4.6.7"
   },
-  "publishConfig": { "access": "public", "provenance": true }
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
 }
